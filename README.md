@@ -5,7 +5,7 @@ Wheel event debounce with windows mouse or apple trackpad.
 
 ## Usage
 ```
-addEventListener.on("wheelthrottle", () => {
+document.addEventListener.on("wheelthrottle", () => {
   // ...
 });
 ```
