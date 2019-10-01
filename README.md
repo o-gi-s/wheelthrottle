@@ -13,7 +13,7 @@ addEventListener.on("wheelthrottle", () => {
 ## Install
 
 `
-npm install wheelthrottle
+npm install --save-dev wheelthrottle
 `
 
 ## Licence
