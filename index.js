@@ -1,2 +1,2 @@
-var myModule = require("./lib/wheelthrottle.js");
+var myModule = require("./main.js");
 module.exports = myModule;

@@ -1,0 +1,23 @@
+<% include('./_data'); const data = getData(); %>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Wheelthrottle Demo</title>
+  <link rel="stylesheet" href="./index.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="./index.js"></script>
+</head>
+<body>
+  <div id="main">
+    <div class="card" data-action="false">
+      <h1 class="card__title mbpc-30">WHEEL THROTTLE</h1>
+      <div class="card__wrap">
+        <div class="card__wrap__count"><span data-direction="null" id="count">5</span></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

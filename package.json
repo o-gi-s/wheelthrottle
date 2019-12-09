@@ -2,7 +2,10 @@
   "name": "wheelthrottle",
   "version": "0.0.4",
   "description": "",
+  "author": "o-gi-s",
   "main": "index.js",
+  "license": "ISC",
+  "keywords": [],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,12 +13,35 @@
     "type": "git",
     "url": "git+https://github.com/o-gi-s/wheelthrottle.js.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/o-gi-s/wheelthrottle.js/issues"
   },
   "homepage": "https://github.com/o-gi-s/wheelthrottle.js#readme",
-  "private": false
+  "private": false,
+  "dependencies": {
+    "@babel/core": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "autoprefixer": "^9.7.2",
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "es6-promise": "*",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csscomb": "*",
+    "gulp-ejs": "*",
+    "gulp-html-beautify": "^1.0.1",
+    "gulp-merge-media-queries": "*",
+    "gulp-plumber": "*",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-watch": "^5.0.1"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "ie >= 11",
+    "Android >= 4"
+  ]
 }
