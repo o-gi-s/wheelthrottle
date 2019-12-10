@@ -3,7 +3,7 @@
   "version": "0.0.4",
   "description": "",
   "author": "o-gi-s",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "license": "ISC",
   "keywords": [],
   "scripts": {

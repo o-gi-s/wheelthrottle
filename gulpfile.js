@@ -23,9 +23,9 @@ const gulp = require('gulp'),
 //if node version is lower than v.0.1.2
 require('es6-promise').polyfill();
 
-// clean dist
-gulp.task('clean:dist', (done, cb) => {
-  del(['./dist/*'], cb);
+// clean demo
+gulp.task('clean:demo', (done, cb) => {
+  del(['./demo/*'], cb);
   done();
 });
 
@@ -33,7 +33,7 @@ gulp.task('clean:dist', (done, cb) => {
 gulp.task('browser-sync', (done) => {
   browserSync.init({
     server: {
-      baseDir: "./dist",
+      baseDir: "./demo",
       index: "index.html"
     }
   });
@@ -58,7 +58,7 @@ gulp.task('js', (done) => {
     .pipe(babel({
       presets: ['@babel/preset-env']
     }))
-    .pipe(gulp.dest('./dist'));
+    .pipe(gulp.dest('./demo'));
   done();
 });
 
@@ -72,7 +72,7 @@ gulp.task('css', (done) => {
       }
     }))
     .pipe(concat('module.css'))
-    .pipe(gulp.dest('./dist'));
+    .pipe(gulp.dest('./demo'));
   done();
 });
 
@@ -98,7 +98,7 @@ gulp.task('sass', (done) => {
         cascade: false
       })
     ]))
-    .pipe(gulp.dest('./dist'));
+    .pipe(gulp.dest('./demo'));
   done();
 });
 
@@ -114,13 +114,13 @@ gulp.task('ejs', (done) => {
       "indent_inner_html": true,
       "unformatted": ["head"]
     }))
-    .pipe(gulp.dest("dist/"));
+    .pipe(gulp.dest("demo/"));
   done();
 });
 
 // img
 gulp.task('img', (done) => {
-  gulp.src(SRC_IMG).pipe(gulp.dest("dist/"));
+  gulp.src(SRC_IMG).pipe(gulp.dest("demo/"));
   done();
 });
 
@@ -130,7 +130,7 @@ gulp.task('watch', (done) => {
   // reload image when delete
   gulpwatch(SRC_IMG, (file) => {
     if(file.event === 'unlink'){
-      del('./dist/' + file.relative);
+      del('./demo/' + file.relative);
     }
   });
   
@@ -141,4 +141,20 @@ gulp.task('watch', (done) => {
   gulp.watch(["./template/*.ejs", "./template/_*.ejs"], gulp.parallel('ejs', 'bs-reload'));
   gulp.watch(SRC_IMG, gulp.parallel('img', 'bs-reload'));
 });
-gulp.task('default', gulp.series(gulp.parallel('browser-sync', 'watch', 'js', 'css', 'sass', 'ejs', 'img', 'clean:dist')));
+
+gulp.task('default', gulp.series(gulp.parallel('browser-sync', 'watch', 'js', 'css', 'sass', 'ejs', 'img', 'clean:demo')));
+gulp.task('build', (done) => {
+  gulp.src("./js/main.js")
+    .pipe(plumber({
+      handleError: (err) => {
+        console.log(err);
+        this.emit('end');
+      }
+    }))
+    .pipe(concat('index.js'))
+    .pipe(babel({
+      presets: ['@babel/preset-env']
+    }))
+    .pipe(gulp.dest('./dist'));
+  done();
+});
