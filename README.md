@@ -10,8 +10,12 @@ If you keep wheeling it, It will ignite in a certain time. It's work possibility
 
 ## Usage
 ```
-document.addEventListener("wheelthrottle", (e) => {
-  const WHEEL_DIRECTION = e.direction; // 1 or -1
+import WheelThrottle from "WheelThrottle";
+
+const targetEl = new WheelThrottle(document.getElementById("id"));
+
+targetEl.addWheelThrottle((e: Event) => {
+  const WHEEL_DIRECTION = e.detail.direction; // 1 or -1
   // ...
 });
 ```
