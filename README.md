@@ -8,6 +8,9 @@ When we scroll with apple magic mouse and track pad, face a few problem.
 Because that's those have inertia scroll forcibly. Wheelthrottle made possible "one wheel one fire".  
 If you keep wheeling it, It will ignite in a certain time. It's work possibility normal mouse also.
 
+## SAMPLE
+[DEMO PAGE](https://o-gi-s.github.io/wheelthrottle)
+
 ## Usage
 ```
 import WheelThrottle from "WheelThrottle";
