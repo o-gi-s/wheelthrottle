@@ -3,20 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Wheelthrottle Demo</title>
-  <link rel="stylesheet" href="./index.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="./index.js"></script>
+  <link rel="stylesheet" href="./css/index.css">
+  <script src="./js/index.js"></script>
+  <title>Sample wheelthrottle</title>
 </head>
-<body>
-  <div id="main">
-    <div class="card" data-action="false">
-      <h1 class="card__title mbpc-30">WHEEL THROTTLE</h1>
-      <div class="card__wrap">
-        <div class="card__wrap__count"><span data-direction="null" id="count">5</span></div>
+  <body>
+    <div id="container">
+      <div id="wheelthrottle" class="wrapper">
+        <h1>WHEEL THROTTLE</h1>
+        <ul class="dots">
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+      <div id="wheel" class="wrapper">
+        <h1>WHEEL</h1>
+        <ul class="dots">
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
       </div>
     </div>
-  </div>
-</body>
+  </body>
 </html>
