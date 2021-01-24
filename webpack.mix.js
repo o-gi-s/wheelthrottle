@@ -34,6 +34,6 @@ switch (process.env.NODE_ENV) {
     });
     break;
   case "prod":
-    mix.ts("./src/WheelThrottle.ts", "./dist/index.js");
+    mix.ts("./index.ts", "./dist/index.js");
     break;
 };

@@ -86,18 +86,18 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/WheelThrottle.ts":
-/*!******************************!*\
-  !*** ./src/WheelThrottle.ts ***!
-  \******************************/
+/***/ "./index.ts":
+/*!******************!*\
+  !*** ./index.ts ***!
+  \******************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-const EventDispatcher_1 = __webpack_require__(/*! ./lib/EventDispatcher */ "./src/lib/EventDispatcher.ts");
-const name_1 = __webpack_require__(/*! ./constants/name */ "./src/constants/name.ts");
+const EventDispatcher_1 = __webpack_require__(/*! ./src/lib/EventDispatcher */ "./src/lib/EventDispatcher.ts");
+const name_1 = __webpack_require__(/*! ./src/constants/name */ "./src/constants/name.ts");
 class WheelThrottle {
     constructor(el) {
         this.el = el;
@@ -241,13 +241,13 @@ exports.default = EventDispatcher;
 /***/ }),
 
 /***/ 0:
-/*!************************************!*\
-  !*** multi ./src/WheelThrottle.ts ***!
-  \************************************/
+/*!************************!*\
+  !*** multi ./index.ts ***!
+  \************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\drbob\repos\private\wheelthrottle\src\WheelThrottle.ts */"./src/WheelThrottle.ts");
+module.exports = __webpack_require__(/*! C:\Users\drbob\repos\private\wheelthrottle\index.ts */"./index.ts");
 
 
 /***/ })

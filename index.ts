@@ -1,5 +1,5 @@
-import EventDispatcher from "./lib/EventDispatcher";
-import constants from "./constants/name";
+import EventDispatcher from "./src/lib/EventDispatcher";
+import constants from "./src/constants/name";
 
 export default class WheelThrottle {
 
