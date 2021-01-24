@@ -1,20 +1,39 @@
 
 const mix = require("laravel-mix");
 
+
 mix.setResourceRoot("");
 require("laravel-mix-ejs")
 
-mix.ts("./script/index.ts", "./dist/js/")
-.sass("./sass/index.scss", "./dist/css/")
-.ejs("./template/index.ejs", "./dist/")
-.options({
-  processCssUrls: false
-})
-.autoload({
-  "jquery": ['$', 'window.jQuery'],
-})
-.browserSync({
-  files: "./**/*",
-  server: "./dist/",
-  proxy: false
-});
+switch (process.env.NODE_ENV) {
+  case "dev":
+    mix.ts("./script/index.ts", "./docs/js/")
+    .sass("./sass/index.scss", "./docs/css/")
+    .ejs("./template/index.ejs", "./docs/")
+    .options({
+      processCssUrls: false
+    })
+    .autoload({
+      "jquery": ['$', 'window.jQuery'],
+    })
+    .browserSync({
+      files: "./**/*",
+      server: "./docs/",
+      proxy: false
+    });
+    break;
+  case "demo":
+    mix.ts("./script/index.ts", "./docs/js/")
+    .sass("./sass/index.scss", "./docs/css/")
+    .ejs("./template/index.ejs", "./docs/")
+    .options({
+      processCssUrls: false
+    })
+    .autoload({
+      "jquery": ['$', 'window.jQuery'],
+    });
+    break;
+  case "prod":
+    mix.ts("./src/WheelThrottle.ts", "./dist/index.js");
+    break;
+};
