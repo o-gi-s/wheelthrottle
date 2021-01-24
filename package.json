@@ -3,9 +3,11 @@
   "version": "1.0.1",
   "description": "",
   "author": "o-gi-s",
-  "main": "./dist/index.js",
+  "main": "dist/index.js",
   "license": "ISC",
-  "keywords": [],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "cross-env NODE_ENV=dev ./node_modules/webpack/bin/webpack.js --config=node_modules/laravel-mix/setup/webpack.config.js --watch",
     "build:demo": "cross-env NODE_ENV=demo ./node_modules/webpack/bin/webpack.js --config=node_modules/laravel-mix/setup/webpack.config.js",
