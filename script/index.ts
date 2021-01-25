@@ -1,6 +1,6 @@
 import WindowColor from "./WindowColor";
 import Dots from "./Dots";
-import WheelThrottle from "../src/WheelThrottle";
+import WheelThrottle from "../src/wheelthrottle";
 
 $(() => {
   const windowColor = new WindowColor($(".wrapper"));

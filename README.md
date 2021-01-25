@@ -13,7 +13,7 @@ If you keep wheeling it, It will ignite in a certain time. It's work possibility
 
 ## Usage
 ```
-import WheelThrottle from "wheelThrottle";
+import WheelThrottle from "wheelthrottle";
 
 const targetEl = new WheelThrottle(document.getElementById("id"));
 
