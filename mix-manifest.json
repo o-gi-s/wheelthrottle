@@ -1,3 +1,4 @@
 {
-    "/dist/index.js": "/dist/index.js"
+    "/docs/js/index.js": "/docs/js/index.js",
+    "/docs/css/index.css": "/docs/css/index.css"
 }

@@ -33,7 +33,4 @@ switch (process.env.NODE_ENV) {
       "jquery": ['$', 'window.jQuery'],
     });
     break;
-  case "prod":
-    mix.ts("./index.ts", "./dist/index.js");
-    break;
 };

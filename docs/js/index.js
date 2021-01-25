@@ -11071,10 +11071,13 @@ exports.default = WindowColor;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function($) {
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-var WindowColor_1 = __webpack_require__(/*! ./WindowColor */ "./script/WindowColor.ts");
-var Dots_1 = __webpack_require__(/*! ./Dots */ "./script/Dots.ts");
-var WheelThrottle_1 = __webpack_require__(/*! ../src/WheelThrottle */ "./src/WheelThrottle.ts");
+var WindowColor_1 = __importDefault(__webpack_require__(/*! ./WindowColor */ "./script/WindowColor.ts"));
+var Dots_1 = __importDefault(__webpack_require__(/*! ./Dots */ "./script/Dots.ts"));
+var WheelThrottle_1 = __importDefault(__webpack_require__(/*! ../src/WheelThrottle */ "./src/WheelThrottle.ts"));
 $(function () {
     var windowColor = new WindowColor_1.default($(".wrapper"));
     windowColor.setColor();
@@ -11112,9 +11115,12 @@ $(function () {
 
 "use strict";
 
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-var EventDispatcher_1 = __webpack_require__(/*! ./lib/EventDispatcher */ "./src/lib/EventDispatcher.ts");
-var name_1 = __webpack_require__(/*! ./constants/name */ "./src/constants/name.ts");
+var EventDispatcher_1 = __importDefault(__webpack_require__(/*! ./lib/EventDispatcher */ "./src/lib/EventDispatcher.ts"));
+var name_1 = __importDefault(__webpack_require__(/*! ./constants/name */ "./src/constants/name.ts"));
 var WheelThrottle = (function () {
     function WheelThrottle(el) {
         this.el = el;
@@ -11169,8 +11175,11 @@ exports.default = {
 
 "use strict";
 
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-var name_1 = __webpack_require__(/*! ../constants/name */ "./src/constants/name.ts");
+var name_1 = __importDefault(__webpack_require__(/*! ../constants/name */ "./src/constants/name.ts"));
 var EventDispatcher = (function () {
     function EventDispatcher() {
         this.tmpArray = [];
