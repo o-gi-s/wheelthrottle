@@ -1,0 +1,14 @@
+{
+  "name": "wheelthrottle",
+  "version": "1.0.7",
+  "description": "",
+  "author": "o-gi-s",
+  "main": "./index.js",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/o-gi-s/wheelthrottle.js.git"
+  },
+  "homepage": "https://github.com/o-gi-s/wheelthrottle.js#readme",
+  "private": false
+}
