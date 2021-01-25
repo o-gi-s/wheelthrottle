@@ -6,7 +6,7 @@
   "main": "dist/index.js",
   "license": "ISC",
   "files": [
-    "dist"
+    "dist/*"
   ],
   "scripts": {
     "dev": "cross-env NODE_ENV=dev ./node_modules/webpack/bin/webpack.js --config=node_modules/laravel-mix/setup/webpack.config.js --watch",
